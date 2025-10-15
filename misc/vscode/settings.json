@@ -1,0 +1,188 @@
+{
+    // C/C++ extension settings
+    "C_Cpp.clang_format_style": "file",
+    "C_Cpp.codeAnalysis.clangTidy.enabled": true,
+    "C_Cpp.default.configurationProvider": "ms-vscode.cmake-tools",
+    "C_Cpp.default.cppStandard": "c++23",
+    "C_Cpp.formatting": "clangFormat",
+    // CMake extension settings
+    "cmake.additionalCompilerSearchDirs": [
+        // These two should cover LLVM installations at default locations
+        "/usr/local/opt/llvm/bin",
+        "/opt/homebrew/opt/llvm/bin"
+    ],
+    "cmake.buildBeforeRun": true,
+    "cmake.configureOnOpen": true,
+    "cmake.ctest.testExplorerIntegrationEnabled": false,
+    "cmake.deleteBuildDirOnCleanConfigure": true,
+    "cmake.loggingLevel": "info",
+    "cmake.pinnedCommands": [
+        "cmake.editKits",
+        "cmake.configure",
+        "cmake.clean"
+    ],
+    "cmake.options.advanced": {
+        "folder": {
+            "projectStatusVisibility": "hidden"
+        },
+        "build": {
+            "statusBarVisibility": "visible",
+            "projectStatusVisibility": "visible"
+        },
+        "buildPreset": {
+            "statusBarVisibility": "visible"
+        },
+        "buildTarget": {
+            "statusBarVisibility": "hidden"
+        },
+        "debug": {
+            "statusBarVisibility": "visible"
+        },
+        "launch": {
+            "statusBarVisibility": "visible"
+        },
+        "ctest": {
+            "statusBarVisibility": "hidden",
+            "projectStatusVisibility": "hidden"
+        },
+        "cpack": {
+            "projectStatusVisibility": "hidden"
+        },
+        "workflow": {
+            "projectStatusVisibility": "hidden"
+        },
+        "launchTarget": {
+            "statusBarVisibility": "visible"
+        }
+    },
+    "cmake.sourceDirectory": "${workspaceFolder}",
+    // Editor settings
+    "editor.detectIndentation": false,
+    "editor.formatOnPaste": true,
+    "editor.formatOnSave": true,
+    "editor.formatOnSaveMode": "modifications",
+    "editor.formatOnType": true,
+    "editor.inlayHints.enabled": "offUnlessPressed",
+    "editor.inlayHints.fontSize": 10,
+    "editor.inlayHints.padding": true,
+    "editor.wordWrap": "wordWrapColumn",
+    "editor.wordWrapColumn": 80,
+    // C++ TestMate extension settings
+    "testMate.cpp.debug.breakOnFailure": true,
+    "testMate.cpp.debug.configTemplate": {
+        "args": "${argsArray}",
+        "cwd": "${cwd}",
+        "darwin": {
+            "MIMode": "lldb",
+            "type": "cppdbg"
+        },
+        "env": "${envObj}",
+        "environment": "${envObjArray}",
+        "linux": {
+            "MIMode": "gdb",
+            "type": "cppdbg"
+        },
+        "program": "${exec}",
+        "sourceFileMap": "${sourceFileMapObj}",
+        "type": "cppdbg",
+        "win32": {
+            "type": "cppvsdbg"
+        }
+    },
+    "testMate.cpp.discovery.runtimeLimit": 60,
+    "testMate.cpp.test.executables": "${workspaceFolder}/bin/**/project_tests*",
+    "testMate.cpp.test.parallelExecutionLimit": 8,
+    "testMate.cpp.test.runtimeLimit": 20,
+    "testMate.cpp.test.workingDirectory": "${workspaceFolder}",
+    "files.associations": {
+        "__bit_reference": "cpp",
+        "__config": "cpp",
+        "__debug": "cpp",
+        "__locale": "cpp",
+        "__split_buffer": "cpp",
+        "__verbose_abort": "cpp",
+        "atomic": "cpp",
+        "cmath": "cpp",
+        "cstddef": "cpp",
+        "cstdint": "cpp",
+        "cstdlib": "cpp",
+        "cstring": "cpp",
+        "exception": "cpp",
+        "initializer_list": "cpp",
+        "iosfwd": "cpp",
+        "limits": "cpp",
+        "locale": "cpp",
+        "new": "cpp",
+        "stdexcept": "cpp",
+        "string": "cpp",
+        "string_view": "cpp",
+        "tuple": "cpp",
+        "typeinfo": "cpp",
+        "vector": "cpp",
+        "*.tcc": "cpp",
+        "compare": "cpp",
+        "concepts": "cpp",
+        "algorithm": "cpp",
+        "memory_resource": "cpp",
+        "type_traits": "cpp",
+        "utility": "cpp",
+        "__errc": "cpp",
+        "__hash_table": "cpp",
+        "__mutex_base": "cpp",
+        "__node_handle": "cpp",
+        "__threading_support": "cpp",
+        "array": "cpp",
+        "bitset": "cpp",
+        "cctype": "cpp",
+        "charconv": "cpp",
+        "clocale": "cpp",
+        "complex": "cpp",
+        "condition_variable": "cpp",
+        "cstdarg": "cpp",
+        "cstdio": "cpp",
+        "ctime": "cpp",
+        "cwchar": "cpp",
+        "cwctype": "cpp",
+        "forward_list": "cpp",
+        "iomanip": "cpp",
+        "ios": "cpp",
+        "istream": "cpp",
+        "mutex": "cpp",
+        "numbers": "cpp",
+        "optional": "cpp",
+        "ostream": "cpp",
+        "queue": "cpp",
+        "ratio": "cpp",
+        "semaphore": "cpp",
+        "span": "cpp",
+        "sstream": "cpp",
+        "stack": "cpp",
+        "streambuf": "cpp",
+        "system_error": "cpp",
+        "thread": "cpp",
+        "unordered_map": "cpp",
+        "variant": "cpp",
+        "bit": "cpp",
+        "chrono": "cpp",
+        "functional": "cpp",
+        "iterator": "cpp",
+        "memory": "cpp",
+        "numeric": "cpp",
+        "random": "cpp",
+        "format": "cpp",
+        "print": "cpp",
+        "stop_token": "cpp",
+        "text_encoding": "cpp",
+        "cinttypes": "cpp",
+        "regex": "cpp",
+        "source_location": "cpp",
+        "__tree": "cpp",
+        "deque": "cpp",
+        "list": "cpp",
+        "map": "cpp",
+        "set": "cpp",
+        "unordered_set": "cpp",
+        "valarray": "cpp",
+        "ranges": "cpp"
+    }
+}
