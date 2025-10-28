@@ -15,7 +15,7 @@ FetchContent_Declare(
     GIT_TAG        b514bdc898e2951020cbdca1304b75f5950d1f59  # release-1.15.0 (HEAD of branch v1.15.x)
     GIT_PROGRESS   TRUE                                      # show git clone progress
     UPDATE_DISCONNECTED TRUE                                 # do not pull on re-configuration
-    FIND_PACKAGE_ARGS                                        # use find_package(GTest) first
+    #FIND_PACKAGE_ARGS                                        # use find_package(GTest) first
 )
 
 # This creates the target gtest which is the target of the GoogleTest library
