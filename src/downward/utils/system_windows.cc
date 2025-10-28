@@ -7,6 +7,7 @@
 #include <csignal>
 #include <ctime>
 #include <iostream>
+#include <new>
 #include <process.h>
 #include <psapi.h>
 
