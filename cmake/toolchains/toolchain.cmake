@@ -35,7 +35,11 @@ endfunction()
 
 # On MacOS, select LLVM's C++ compiler.
 if (${CMAKE_HOST_SYSTEM_NAME} MATCHES "Darwin")
-    if (EXISTS "/usr/local/opt/llvm/bin/clang++")
+    if (EXISTS "/usr/local/opt/llvm@20/bin/clang++")
+        set(CMAKE_CXX_COMPILER "/usr/local/opt/llvm@20/bin/clang++")
+    elseif(EXISTS "/opt/homebrew/opt/llvm@20/bin/clang++")
+        set(CMAKE_CXX_COMPILER "/opt/homebrew/opt/llvm@20/bin/clang++")
+    elseif(EXISTS "/usr/local/opt/llvm/bin/clang++")
         set(CMAKE_CXX_COMPILER "/usr/local/opt/llvm/bin/clang++")
     elseif(EXISTS "/opt/homebrew/opt/llvm/bin/clang++")
         set(CMAKE_CXX_COMPILER "/opt/homebrew/opt/llvm/bin/clang++")
