@@ -86,6 +86,26 @@
             "name": "all_tests",
             "displayName": "Run all tests.",
             "inherits": "base_tests"
+        },
+        {
+            "name": "blind_heuristic",
+            "displayName": "Run all tests for the blind heuristic.",
+            "inherits": "base_tests",
+            "filter": {
+                "include": {
+                    "name": "BlindHeuristicTestsPublic"
+                }
+            }
+        },
+        {
+            "name": "gc_heuristic",
+            "displayName": "Run all tests for the goal-counting heuristic.",
+            "inherits": "base_tests",
+            "filter": {
+                "include": {
+                    "name": "GoalCountTestsPublic"
+                }
+            }
         }
     ]
 }
