@@ -325,16 +325,6 @@ create_library(
 )
 
 create_library(
-    NAME extra_tasks
-    HELP "Non-core task transformations"
-    SOURCES
-        downward/tasks/syntactic_projection
-    DEPENDS
-        task_properties
-    TARGET downward
-)
-
-create_library(
     NAME causal_graph
     HELP "Causal Graph"
     SOURCES
