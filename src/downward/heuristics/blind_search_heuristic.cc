@@ -22,14 +22,45 @@ BlindSearchHeuristic::BlindSearchHeuristic(
     const shared_ptr<ClassicalPlanningTask>& task)
     : Heuristic(task)
 {
-    // TODO: implement if needed!
 }
 
 int BlindSearchHeuristic::compute_heuristic(const State& state)
 {
-    // TODO: implement!
-    (void)state;
-    utils::not_implemented();
+// Check if this is a goal state
+    int num_goals = task->get_num_goals();
+    auto state_facts = task->get_state_facts(state);
+    
+    bool is_goal = true;
+    for (int i = 0; i < num_goals; ++i) {
+        FactPair goal_fact = task->get_goal_fact(i);
+        if (goal_fact.value != state_facts[goal_fact.var].get_value()) {
+            is_goal = false;
+            break;
+        }
+    }
+    
+    if (is_goal) {
+        return 0;
+    }
+    
+    // Otherwise, return the minimal operator cost
+    int num_operators = task->get_num_operators();
+    
+    // If no operators exist, return infinity (DEAD_END)
+    if (num_operators == 0) {
+        return INFINITY;  
+    }
+    
+    // Find minimal operator cost
+    int min_cost = numeric_limits<int>::max();
+    for (int op = 0; op < num_operators; ++op) {
+        int cost = task->get_operator_cost(op);
+        if (cost < min_cost) {
+            min_cost = cost;
+        }
+    }
+    
+    return min_cost; // All goal facts satisfied, this is a goal state
 }
 
 std::unique_ptr<Heuristic>

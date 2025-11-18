@@ -27,9 +27,21 @@ GoalCountHeuristic::GoalCountHeuristic(
 
 int GoalCountHeuristic::compute_heuristic(const State& state)
 {
-    // TODO: implement!
-    (void)state;
-    utils::not_implemented();
+    // Count the number of unsatisfied goal facts
+    int num_goals = task->get_num_goals();
+    auto state_facts = task->get_state_facts(state);
+    
+    int unsatisfied_goals = 0;
+    
+    for (int i = 0; i < num_goals; ++i) {
+        FactPair goal_fact = task->get_goal_fact(i);
+        // we check if the goal fact is satisfied in the current state
+        if (goal_fact.value != state_facts[goal_fact.var].get_value()) {
+            unsatisfied_goals++;
+        }
+    }
+    
+    return unsatisfied_goals;
 }
 
 std::unique_ptr<Heuristic>
