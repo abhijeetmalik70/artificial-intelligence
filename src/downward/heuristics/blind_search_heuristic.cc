@@ -1,4 +1,5 @@
 #include "downward/heuristics/blind_search_heuristic.h"
+#include <cmath>
 
 #include "downward/heuristic.h"
 
@@ -48,7 +49,7 @@ int BlindSearchHeuristic::compute_heuristic(const State& state)
     
     // If no operators exist, return infinity (DEAD_END)
     if (num_operators == 0) {
-        return INFINITY;  
+        return std::numeric_limits<int>::max();
     }
     
     // Find minimal operator cost

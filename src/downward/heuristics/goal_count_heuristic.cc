@@ -1,4 +1,5 @@
 #include "downward/heuristics/goal_count_heuristic.h"
+#include <cmath>
 
 #include "downward/heuristic.h"
 
