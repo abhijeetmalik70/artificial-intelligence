@@ -49,7 +49,7 @@ int BlindSearchHeuristic::compute_heuristic(const State& state)
     
     // If no operators exist, return infinity (DEAD_END)
     if (num_operators == 0) {
-        return std::numeric_limits<int>::max();
+        return DEAD_END;
     }
     
     // Find minimal operator cost
